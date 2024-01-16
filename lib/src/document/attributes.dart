@@ -378,7 +378,7 @@ class NotusStyle {
 
 /// Applies bold style to a text segment.
 class _BoldAttribute extends NotusAttribute<bool?> {
-  const _BoldAttribute() : super._('b', NotusAttributeScope.inline, true);
+  const _BoldAttribute() : super._(['b', 'bold'], NotusAttributeScope.inline, true);
 }
 
 /// Applies italic style to a text segment.
