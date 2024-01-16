@@ -96,6 +96,37 @@ class NotusAttribute<T> implements NotusAttributeBuilder<T> {
     NotusAttribute.indent.key: NotusAttribute.indent,
     NotusAttribute.alignment.key: NotusAttribute.alignment,
     NotusAttribute.block.key: NotusAttribute.block,
+    'b': NotusAttribute.bold,
+    'bold': NotusAttribute.bold,
+    'i': NotusAttribute.italic,
+    'italic': NotusAttribute.italic,
+    'u': NotusAttribute.underline,
+    'underline': NotusAttribute.underline,
+    's': NotusAttribute.strikethrough,
+    'strike': NotusAttribute.strikethrough,
+    'strikethrough': NotusAttribute.strikethrough,
+    'a': NotusAttribute.link,
+    'font-size': NotusAttribute.fontSize,
+    'font-family': NotusAttribute.fontFamily,
+    'color': NotusAttribute.color,
+    'background-color': NotusAttribute.backgroundColor,
+    'heading': NotusAttribute.heading,
+    'h1': NotusAttribute.heading.level1,
+    'h2': NotusAttribute.heading.level2,
+    'h3': NotusAttribute.heading.level3,
+    'checked': NotusAttribute.checked,
+    'indent': NotusAttribute.indent,
+    'alignment': NotusAttribute.alignment,
+    'end': NotusAttribute.alignment.end,
+    'center': NotusAttribute.alignment.center,
+    'justify': NotusAttribute.alignment.justify,
+    'block': NotusAttribute.block,
+    'ul': NotusAttribute.block.bulletList,
+    'ol': NotusAttribute.block.numberList,
+    'list': NotusAttribute.block.numberList,
+    'cl': NotusAttribute.block.checkList,
+    'quote': NotusAttribute.block.quote,
+    'code': NotusAttribute.block.code,
   };
 
   // Inline attributes
@@ -378,7 +409,7 @@ class NotusStyle {
 
 /// Applies bold style to a text segment.
 class _BoldAttribute extends NotusAttribute<bool?> {
-  const _BoldAttribute() : super._(['b', 'bold'], NotusAttributeScope.inline, true);
+  const _BoldAttribute() : super._('b', NotusAttributeScope.inline, true);
 }
 
 /// Applies italic style to a text segment.
